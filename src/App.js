@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import logo from "./logo.svg"
 import "./App.css"
 // import parse from "html-react-parser";
 
@@ -31,15 +30,17 @@ class LambdaCall extends Component {
     const { loading, msg } = this.state
 
     return (
-      <p>
-        <button
-          onClick={this.handleClick("lorde-ipsum")}
-          className="button"
-        >
-          {loading ? "Loading..." : "Generate Lorde Ipsum"}
-        </button>
-        {msg}
-      </p>
+      <>
+        <p>
+          <button
+            onClick={this.handleClick("lorde-ipsum")}
+            className="button"
+          >
+            {loading ? "Loading..." : "Generate Lorde Ipsum"}
+          </button>
+          {msg}
+        </p>
+      </>
     )
   }
 }
@@ -49,7 +50,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        <h1> Lorde Ipsum </h1>
           <LambdaCall />
         </header>
       </div>
