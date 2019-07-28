@@ -1,8 +1,10 @@
 import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
+import parse from "html-react-parser";
 
-class LambdaDemo extends Component {
+
+class LambdaCall extends Component {
   constructor(props) {
     super(props)
     this.state = { loading: false, msg: null }
@@ -22,10 +24,13 @@ class LambdaDemo extends Component {
 
     return (
       <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
+        <button
+          onClick={this.handleClick("lorde-ipsum")}
+          className="button"
+        >
+          {loading ? "Loading..." : "Generate Lorde Ipsum"}
+        </button>
+        {msg && parse(msg)}
       </p>
     )
   }
@@ -37,10 +42,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
+          <LambdaCall />
         </header>
       </div>
     )
