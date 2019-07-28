@@ -13,7 +13,7 @@ class LambdaCall extends Component {
     e.preventDefault();
 
     this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
+    fetch("/.netlify/functions/lorde-ipsum")
       .then(res => {
         console.log(res);
         return res.json();
