@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
-import parse from "html-react-parser";
+// import parse from "html-react-parser";
 
 
 class LambdaCall extends Component {
@@ -11,12 +11,20 @@ class LambdaCall extends Component {
   }
 
   handleClick = api => e => {
-    e.preventDefault()
+    e.preventDefault();
 
     this.setState({ loading: true })
     fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
+      .then(res => {
+        console.log(res);
+        return res.json();
+        })
+      .then(data => {
+        console.log(data);
+        this.setState({ loading: false, msg: data.msg })})
+      .catch(err => {
+        console.log("Error Reading data " + err);
+      });
   }
 
   render() {
@@ -30,7 +38,7 @@ class LambdaCall extends Component {
         >
           {loading ? "Loading..." : "Generate Lorde Ipsum"}
         </button>
-        {msg && parse(msg)}
+        {msg}
       </p>
     )
   }
