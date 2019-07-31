@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import "./App.css"
-// import parse from "html-react-parser";
+import parse from "html-react-parser";
 
 
 class LambdaCall extends Component {
@@ -38,7 +38,7 @@ class LambdaCall extends Component {
           >
             {loading ? "Loading..." : "Generate Lorde Ipsum"}
           </button>
-          {msg}
+          {msg && parse(msg)}
         </p>
       </>
     )
