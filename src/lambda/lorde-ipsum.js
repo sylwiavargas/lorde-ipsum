@@ -53,7 +53,8 @@ export function generateWords(wordCount) {
   for (var i = 0; i < wordCount; i++) {
     words.push(WORDS[getRandomInt()]);
   }
-  const formattedWords = `<p>${words.join(" ")}</p>`;
+  const capitalized = words.join(" ")
+  const formattedWords = `<p>${capitalized}</p>`;
 
   return formattedWords;
 }

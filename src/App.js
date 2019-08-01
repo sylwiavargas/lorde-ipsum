@@ -28,6 +28,7 @@ class LambdaCall extends Component {
 
   render() {
     const { loading, msg } = this.state
+    console.log(this.state)
 
     return (
       <>
