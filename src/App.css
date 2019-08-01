@@ -37,3 +37,10 @@ body {
   background-color: teal;
   color: white;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding-left: 1%;
+  width: 100%;
+}

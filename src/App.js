@@ -46,6 +46,21 @@ class LambdaCall extends Component {
   }
 }
 
+class Footer extends Component {
+
+  render() {
+
+    return (
+      <>
+        <p className="footer">
+        <hr />
+          Hey
+        </p>
+      </>
+    )
+  }
+}
+
 class App extends Component {
   render() {
     return (
@@ -54,6 +69,7 @@ class App extends Component {
         <h1> Lorde Ipsum </h1>
           <LambdaCall />
         </header>
+        <Footer />
       </div>
     )
   }
