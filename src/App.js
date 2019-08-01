@@ -32,7 +32,7 @@ class LambdaCall extends Component {
 
     return (
       <>
-        <p>
+        <p className="paragraph">
           <button
             onClick={this.handleClick("lorde-ipsum")}
             className="button"
