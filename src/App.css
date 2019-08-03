@@ -40,9 +40,7 @@ body {
 
 .footer {
   position: fixed;
-  background-color: white;
   bottom: 0;
   padding-left: 1%;
-  margin-bottom: 10%;
   width: 100%;
 }
