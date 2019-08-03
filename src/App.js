@@ -32,15 +32,17 @@ class LambdaCall extends Component {
 
     return (
       <>
-        <p className="paragraph">
+        <div>
           <button
             onClick={this.handleClick("lorde-ipsum")}
             className="button"
           >
             {loading ? "Loading..." : "Generate Lorde Ipsum"}
           </button>
+          <p className="paragraph">
           {msg && parse(msg)}
-        </p>
+          </p>
+        </div>
       </>
     )
   }
