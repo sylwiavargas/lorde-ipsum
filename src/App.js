@@ -54,7 +54,7 @@ class Footer extends Component {
       <>
         <p className="footer">
         <hr />
-          Hey
+          Read more of <a href="https://www.blackpast.org/african-american-history/speeches-african-american-history/1981-audre-lorde-uses-anger-women-responding-racism/"> Audrey Lorde </a>
         </p>
       </>
     )
