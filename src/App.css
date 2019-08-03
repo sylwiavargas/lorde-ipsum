@@ -18,7 +18,8 @@ body {
 }
 
 .paragraph {
-  margin: 50%;
+  margin-left: 50%;
+  margin-right: 50%;
   padding: 10px;
 }
 
